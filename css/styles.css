@@ -7,44 +7,105 @@ h1 {
     margin: 0;
 }
 
+fieldset {
+    border: none;
+    border-top: 1px solid black;
+    padding: 0;
+}
+
+.contact_formset {
+    display: flex;
+}
+
+legend {
+    font-size: 1.3em;
+    padding: 13px 0 13px 0;
+}
+
+label {
+    margin-bottom: 7px;
+}
+
+textarea {
+    border-radius: 5px;
+    background-color: rgb(238, 238, 238);
+    border: none;
+}
+
+footer {
+    text-align: center;
+}
+
+footer p {
+    font-size: small;
+    font-style: italic;
+}
+
+
 /* LAYOUT STYLES ------------ */
 .container {
     width: 80%;
     margin: auto;
 }
 
-.header,
-.top-information {
-    display: flex;
-}
-
 .header {
     background-color: rgb(50, 57, 88);
     color: white;
     font-family: 'Grenze', serif;
-    flex-direction: row;
-    justify-content: center;
+    text-align: center;
+    padding: 25px;
 }
 
 .top-information {
-    flex-direction: column;
-    align-items: center;
     text-align: center;
     border-bottom: 1.5px solid black;
 }
 
-fieldset > label {
-    display: block;
+.contact_formset > input,
+.contact_formset > select {
+   height: 43px;
+   border-radius: 5px;
+   border: none;
+   background-color: rgb(238, 238, 238);
 }
 
-/* ID STYLES ---------------- */
-#logo {
-    margin: 40px;
+.contact_formset > input:not([name*="zipcode"]),
+.contact_formset > select {
+    width: 100%;
 }
 
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline-block;
+    margin: 7px 0 7px 0;
+}
+
+.newsletter_formset > p {
+    margin: 13px 0 13px 0;
+}
+
+input[type="submit"] {
+    border: none;
+    width: 100%;
+    height: 50px;
+    margin: 21px 0 9px 0;
+    border-radius: 5px;
+    background-color: rgb(83, 197, 172);
+    color: white;
+    font-weight: bold;
+}
+
+/* ID QUERIES ---------------- */
+
+#other_topics {
+    width: 100%;
+}
+
+
+/* MEDIA QUERIES ------------ */
 
 @media (min-width: 768px) {
     body {
-        background-color: green;
+        background-color: rgb(232, 250, 255);
     }
 }
