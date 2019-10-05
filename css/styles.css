@@ -1,0 +1,50 @@
+/* BASE STYLES -------------- */
+body {
+    font-family: 'Dosis', sans-serif;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* LAYOUT STYLES ------------ */
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.header,
+.top-information {
+    display: flex;
+}
+
+.header {
+    background-color: rgb(50, 57, 88);
+    color: white;
+    font-family: 'Grenze', serif;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.top-information {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1.5px solid black;
+}
+
+fieldset > label {
+    display: block;
+}
+
+/* ID STYLES ---------------- */
+#logo {
+    margin: 40px;
+}
+
+
+@media (min-width: 768px) {
+    body {
+        background-color: green;
+    }
+}
