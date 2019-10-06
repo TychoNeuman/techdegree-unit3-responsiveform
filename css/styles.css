@@ -104,6 +104,10 @@ textarea:focus {
     transition: background 1s;
 }
 
+input[type="submit"]:focus {
+    background-color: darkslateblue;
+}
+
 /* ID QUERIES ---------------- */
 
 #other_topics {
