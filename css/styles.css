@@ -1,6 +1,7 @@
 /* BASE STYLES -------------- */
 body {
     font-family: 'Dosis', sans-serif;
+    background-color: rgb(228, 228, 220);
 }
 
 h1 {
@@ -15,7 +16,7 @@ fieldset {
 
 .contact_formset {
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
 }
 
 legend {
@@ -62,10 +63,6 @@ footer p {
     border-bottom: 1.5px solid black;
 }
 
-.contact_formset {
-    flex-flow: 1;
-}
-
 .contact_formset > input,
 .contact_formset > select {
    height: 43px;
@@ -95,6 +92,18 @@ input[type="submit"] {
     font-weight: bold;
 }
 
+input::placeholder {
+    text-align: right;
+    padding: 15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    background-color: rgb(224, 250, 255);
+    transition: background 1s;
+}
+
 /* ID QUERIES ---------------- */
 
 #other_topics {
@@ -114,8 +123,7 @@ input[type="submit"] {
     }
     
     .contact_formset {
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
     }
 
     .contact_formset > input:not([name*="zipcode"]),
