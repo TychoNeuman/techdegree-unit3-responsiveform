@@ -100,7 +100,7 @@ input::placeholder {
 input:focus,
 select:focus,
 textarea:focus {
-    background-color: rgb(224, 250, 255);
+    background-color: white;
     transition: background 1s;
 }
 
