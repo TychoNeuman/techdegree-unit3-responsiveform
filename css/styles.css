@@ -15,6 +15,7 @@ fieldset {
 
 .contact_formset {
     display: flex;
+    flex-direction: column;
 }
 
 legend {
@@ -61,17 +62,16 @@ footer p {
     border-bottom: 1.5px solid black;
 }
 
+.contact_formset {
+    flex-flow: 1;
+}
+
 .contact_formset > input,
 .contact_formset > select {
    height: 43px;
    border-radius: 5px;
    border: none;
    background-color: rgb(238, 238, 238);
-}
-
-.contact_formset > input:not([name*="zipcode"]),
-.contact_formset > select {
-    width: 100%;
 }
 
 input[type="checkbox"],
@@ -101,11 +101,40 @@ input[type="submit"] {
     width: 100%;
 }
 
+#zipcode {
+    width: 30%;
+}
 
 /* MEDIA QUERIES ------------ */
 
 @media (min-width: 768px) {
-    body {
-        background-color: rgb(232, 250, 255);
+
+    .container {
+        width: 60%;
     }
+    
+    .contact_formset {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .contact_formset > input:not([name*="zipcode"]),
+    .contact_formset > select {
+        flex-basis: 70%;
+    } 
+
+    .contact_formset > label {
+        flex-basis: 30%;
+    }
+
+    .contact_formset > input,
+    .contact_formset > select,
+    .contact_formset > label {
+        margin: 7px 0;
+    }
+
+    #zipcode {
+        width: 30%
+    }
+    
 }
