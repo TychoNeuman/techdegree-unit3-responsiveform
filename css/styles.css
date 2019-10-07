@@ -114,10 +114,11 @@ input[type="submit"]:focus {
     background-color: darkslateblue;
 }
 
-/* ID QUERIES ---------------- */
+/* ID STYLES ---------------- */
 
 #other_topics {
     width: 100%;
+    margin-top: 10px;
 }
 
 #zipcode {
